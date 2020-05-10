@@ -1,0 +1,304 @@
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* amaranth-italic - latin */
+@font-face {
+  font-family: "Amaranth";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Amaranth Italic"), local("Amaranth-Italic"),
+    url("../fonts/amaranth-v10-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/amaranth-v10-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather-italic - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Merriweather Italic"), local("Merriweather-Italic"),
+    url("../fonts/merriweather-v21-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/merriweather-v21-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --second-font: "Roboto Slab", serif;
+  --third-font: "Amaranth", sans-serif;
+  --fourth-font: "Merriweather", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 42px;
+  padding-bottom: 110px;
+}
+
+.logo {
+  font-size: 1.625rem;
+  color: #fed136;
+  font-family: var(--third-font);
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navigation__list {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.navigation__list-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.navigation__list-link {
+  color: #222222;
+}
+
+.navigation__list-link:hover,
+.navigation__list-link:focus {
+  color: #fed136;
+}
+
+.services {
+  /* text-align: center; */
+  padding-bottom: 120px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.subtitle {
+  text-transform: none;
+  font-family: var(--fourth-font);
+  font-size: 1rem;
+  color: #777777;
+  margin-bottom: 76px;
+  text-align: center;
+}
+
+.services__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.services__list-item {
+  width: 290px;
+}
+
+.services__list-item::before {
+  width: 72px;
+  height: 71px;
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 26px;
+  border: 3px solid rgb(254, 209, 54);
+  border-radius: 50%;
+}
+
+.icon-basket::before {
+  background-image: url(../img/icons/icon-basket.png);
+}
+
+.icon-laptop::before {
+  background-image: url(../img/icons/icon-laptop.png);
+}
+
+.icon-locked::before {
+  background-image: url(../img/icons/icon-locked.png);
+}
+
+.services__title {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-family: var(--second-font);
+  color: #777777;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: -0.35px;
+}
+
+.contact-us {
+  padding-top: 106px;
+  padding-bottom: 114px;
+  background: #222222 url(../img/background.png) no-repeat right;
+}
+
+.contact__title {
+  color: #fff;
+}
+
+.input-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.contact-form__info {
+  width: 455px;
+}
+
+.contact-form__input {
+  width: 100%;
+  height: 57px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 2px;
+  padding-left: 20px;
+}
+
+.contact-form__input:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: #bbbbbb;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-form__textarea {
+  font-weight: 700;
+  color: #bbbbbb;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  width: 461px;
+  padding: 20px;
+  resize: none;
+}
+/* height: 214px; */
+
+.contact-form__input:required:focus,
+.contact-form__textarea:focus {
+  outline: none;
+}
+
+.contact-form__input:required:focus:valid:not(:placeholder-shown),
+.contact-form__textarea:required:focus:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+.contact-form__input:required:focus:invalid:not(:placeholder-shown),
+.contact-form__textarea:required:focus:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+.form__button {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: rgb(254, 209, 54);
+  width: 240px;
+  height: 66px;
+  cursor: pointer;
+  margin: 0 auto;
+  /* transition: all 0.2s linear; */
+  outline: none;
+  border: none;
+}
