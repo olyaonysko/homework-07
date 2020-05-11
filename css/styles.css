@@ -46,15 +46,15 @@
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* merriweather-italic - latin */
+/* pt-serif-italic - latin */
 @font-face {
-  font-family: "Merriweather";
+  font-family: "PT Serif";
   font-style: italic;
   font-weight: 400;
-  src: local("Merriweather Italic"), local("Merriweather-Italic"),
-    url("../fonts/merriweather-v21-latin-italic.woff2") format("woff2"),
+  src: local("PT Serif Italic"), local("PTSerif-Italic"),
+    url("../fonts/pt-serif-v11-latin-italic.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/merriweather-v21-latin-italic.woff") format("woff");
+      url("../fonts/pt-serif-v11-latin-italic.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -62,7 +62,7 @@
   --main-font: "Montserrat", sans-serif;
   --second-font: "Roboto Slab", serif;
   --third-font: "Amaranth", sans-serif;
-  --fourth-font: "Merriweather", serif;
+  --fourth-font: "PT Serif", serif;
 }
 
 * {
@@ -105,7 +105,6 @@ img {
 
 body {
   font-family: var(--main-font);
-  font-weight: 700;
   font-size: 0.875rem;
 }
 
@@ -134,6 +133,7 @@ body {
 }
 
 .navigation__list {
+  font-weight: 700;
   display: flex;
   text-transform: uppercase;
 }
@@ -152,7 +152,6 @@ body {
 }
 
 .services {
-  /* text-align: center; */
   padding-bottom: 120px;
 }
 
@@ -170,6 +169,7 @@ body {
   color: #777777;
   margin-bottom: 76px;
   text-align: center;
+  font-weight: 400;
 }
 
 .services__list {
@@ -217,7 +217,6 @@ body {
   font-family: var(--second-font);
   color: #777777;
   font-size: 0.875rem;
-  font-weight: 400;
   letter-spacing: -0.35px;
 }
 
@@ -255,21 +254,20 @@ body {
 
 .contact-form__input::placeholder,
 .contact-form__textarea::placeholder {
+  letter-spacing: -0.35px;
   color: #bbbbbb;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: var(--main-font);
 }
 
 .contact-form__textarea {
-  font-weight: 700;
-  color: #bbbbbb;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 5px;
-  width: 461px;
+  flex-basis: 461px;
   padding: 20px;
   resize: none;
 }
-/* height: 214px; */
 
 .contact-form__input:required:focus,
 .contact-form__textarea:focus {
@@ -298,7 +296,6 @@ body {
   height: 66px;
   cursor: pointer;
   margin: 0 auto;
-  /* transition: all 0.2s linear; */
   outline: none;
   border: none;
 }
